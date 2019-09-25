@@ -19,6 +19,7 @@ public class Tarifador {
     
     public double calcularTarifa(UnidadDeMedida unidad, int cantidad, double fraccionamiento) {
         try {
+            //En este caso interpreté que el fraccionamiento es una medida como por ejemplo 0.6, en caso de no ser así, deberia corregirse la cuenta.
             return producto.getPrecio(unidad)*cantidad*fraccionamiento;
         } catch (InvalidUnit e) {
             System.out.println("Ingrese una unidad de medida valida (G, KG)");
